@@ -1,22 +1,100 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | นักเรียน ม.6</title>
-    <!-- Google Fonts: Sarabun (ฟอนต์ภาษาไทยที่ดูเป็นทางการและทันสมัย) -->
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome สำหรับ Icon สวยๆ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>My Portfolio | หน้าหลัก</title>
     <style>
-        /* --- 1. Global Styles & Theme (Pastel Pink) --- */
-        :root {
-            --primary-pink: #FFD1DC;      /* ชมพูพาสเทลหลัก */
-            --light-pink: #FFF0F2;        /* ชมพูอ่อนมากสำหรับพื้นหลัง */
-            --dark-pink: #FF9AA2;         /* ชมพูเข้มสำหรับปุ่มหรือจุดเน้น */
-            --text-color: #5D4A4D;        /* สีตัวอักษรน้ำตาลเข้มเทาๆ เพื่อให้อ่านง่ายกว่าสีดำ */
-            --white: #FFFFFF;
-        }
-
+        /* --- CSS THEME (ใช้ร่วมกันทุกหน้า) --- */
         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f8ff; /* ฟ้าอ่อนมาก */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1e3a8a; /* น้ำเงินเข้ม */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        nav a {
+            color: #93c5fd; /* ฟ้าพาสเทล */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+            background-color: #e0f2fe;
+        }
+        /* --- เฉพาะหน้าหลัก --- */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #2563eb; /* ฟ้าเข้ม */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Digital Portfolio</h1>
+        <nav>
+            <a href="index.html" class="active">หน้าหลัก</a>
+            <a href="about.html">ประวัติส่วนตัว</a>
+            <a href="education.html">ประวัติการศึกษา</a>
+            <a href="portfolio.html">ผลงาน/กิจกรรม</a>
+            <a href="contact.html">ช่องทางการติดต่อ</a>
+        </nav>
+    </header>
+
+    <div class="container hero">
+        <h2>ยินดีต้อนรับสู่ Portfolio ของฉัน</h2>
+        <p style="margin-top: 15px; color: #555;">สวัสดีครับ/ค่ะ ฉันเป็นนักเรียนชั้น ม.6 ที่มีความสนใจในด้าน [ใส่สิ่งที่สนใจ เช่น เทคโนโลยี/ศิลปะ/ภาษา] เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติ ผลงาน และกิจกรรมต่างๆ ของฉัน</p>
+        <a href="about.html" class="btn">ทำความรู้จักกันมากขึ้น</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Created by [ชื่อของคุณ] | ม.6 Portfolio</p>
+    </footer>
+
+</body>
+</html>
