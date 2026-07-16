@@ -1,193 +1,22 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - ม.6</title>
+    <title>My Portfolio | นักเรียน ม.6</title>
+    <!-- Google Fonts: Sarabun (ฟอนต์ภาษาไทยที่ดูเป็นทางการและทันสมัย) -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome สำหรับ Icon สวยๆ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* --- ส่วนของ CSS (สไตล์ธีมสีส้มพาสเทล) --- */
+        /* --- 1. Global Styles & Theme (Pastel Pink) --- */
+        :root {
+            --primary-pink: #FFD1DC;      /* ชมพูพาสเทลหลัก */
+            --light-pink: #FFF0F2;        /* ชมพูอ่อนมากสำหรับพื้นหลัง */
+            --dark-pink: #FF9AA2;         /* ชมพูเข้มสำหรับปุ่มหรือจุดเน้น */
+            --text-color: #5D4A4D;        /* สีตัวอักษรน้ำตาลเข้มเทาๆ เพื่อให้อ่านง่ายกว่าสีดำ */
+            --white: #FFFFFF;
+        }
+
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth; /* ทำให้เวลาคลิกเมนูแล้วหน้าเว็บจะเลื่อนแบบนุ่มนวล */
-        }
-
-        body {
-            background-color: #FFF5EE; /* สีส้มพาสเทลอ่อน */
-            color: #4A4A4A;
-            line-height: 1.6;
-        }
-
-        /* แถบเมนูด้านบน (Sticky Navigation) */
-        header {
-            background-color: #FFDAB9; /* สีส้มพาสเทลเข้ม */
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #D2691E;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #FF4500;
-        }
-
-        /* ส่วนเนื้อหาหลัก */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        /* จัดการแต่ละหน้าย่อย (Section) */
-        section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 10px;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            /* เพิ่ม padding-top เพื่อไม่ให้แถบเมนูด้านบนบังหัวข้อเวลาเลื่อนลงมา */
-            scroll-margin-top: 80px; 
-        }
-
-        h1, h2, h3 {
-            color: #E67E22;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #FFE4B5;
-            padding-bottom: 0.5rem;
-        }
-
-        p, ul {
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* สไตล์สำหรับหน้าผลงาน (Grid Layout) */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 1.5rem;
-        }
-
-        .card {
-            border: 1px solid #FFE4B5;
-            padding: 1.5rem;
-            border-radius: 8px;
-            background-color: #FFFFAF; /* สีครีม/เหลืองพาสเทลตัดกับส้ม */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        /* ส่วนท้ายเว็บ */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #FFDAB9;
-            color: #D2691E;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">หน้าหลัก</a></li>
-                <li><a href="#about">ประวัติส่วนตัว</a></li>
-                <li><a href="#education">ประวัติการศึกษา</a></li>
-                <li><a href="#works">ผลงาน/กิจกรรม</a></li>
-                <li><a href="#contact">ช่องทางการติดต่อ</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-
-        <section id="home">
-            <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
-            <p>สวัสดีค่ะ/ครับ ยินดีต้อนรับเข้าสู่เว็บไซต์แฟ้มสะสมผลงานของนักเรียนชั้นมัธยมศึกษาปีที่ 6 เว็บไซต์นี้รวบรวมเรื่องราว ประวัติการศึกษา และกิจกรรมต่างๆ ที่ฉันได้ทำระหว่างเรียน</p>
-            <p>สามารถเลือกดูหัวข้อต่างๆ ได้จากเมนูด้านบน หรือจะเลื่อนหน้าจอลงไปดูเรื่อยๆ ก็ได้เช่นกันค่ะ/ครับ</p>
-        </section>
-
-        <section id="about">
-            <h2>ประวัติส่วนตัว</h2>
-            <p><strong>ชื่อ-นามสกุล:</strong> [ใส่ชื่อของคุณที่นี่]</p>
-            <p><strong>ชื่อเล่น:</strong> [ใส่ชื่อเล่น]</p>
-            <p><strong>วันเกิด:</strong> [ใส่วันเกิด]</p>
-            <p><strong>แผนการเรียน:</strong> [เช่น วิทย์-คณิต / ศิลป์-คำนวณ]</p>
-            <p><strong>ความสามารถพิเศษ:</strong> [เช่น เขียนโค้ด, วาดภาพ, เล่นดนตรี]</p>
-            <p><strong>เป้าหมายในอนาคต:</strong> [ใส่คณะหรือสาขาที่อยากเข้าศึกษาต่อ]</p>
-        </section>
-
-        <section id="education">
-            <h2>ประวัติการศึกษา</h2>
-            <ul>
-                <li><strong>ระดับมัธยมศึกษาตอนปลาย (ม.4-6):</strong> โรงเรียน....... (GPAX: ......)</li>
-                <li><strong>ระดับมัธยมศึกษาตอนต้น (ม.1-3):</strong> โรงเรียน.......</li>
-                <li><strong>ระดับประถมศึกษา:</strong> โรงเรียน.......</li>
-            </ul>
-        </section>
-
-        <section id="works">
-            <h2>ผลงานและกิจกรรม</h2>
-            <p>นี่คือส่วนหนึ่งของกิจกรรมและผลงานที่ฉันภาคภูมิใจในระหว่างการศึกษา:</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>กิจกรรมที่ 1</h3>
-                    <p>รายละเอียดเกี่ยวกับกิจกรรมที่คุณเข้าร่วมหรือรางวัลที่ได้รับ เช่น งานแข่งขันทักษะวิชาการ</p>
-                </div>
-                <div class="card">
-                    <h3>กิจกรรมที่ 2</h3>
-                    <p>รายละเอียดการเป็นประธานชมรม หรือการทำค่ายอาสาต่างๆ ของโรงเรียน</p>
-                </div>
-                <div class="card">
-                    <h3>กิจกรรมที่ 3</h3>
-                    <p>ผลงานการพัฒนาเว็บไซต์ หรือโครงงานวิทยาศาสตร์ที่เคยทำ</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>ช่องทางการติดต่อ</h2>
-            <p>หากต้องการติดต่อหรือสอบถามข้อมูลเพิ่มเติม สามารถติดต่อได้ตามช่องทางด้านล่างนี้เลยค่ะ/ครับ:</p>
-            <ul>
-                <li><strong>Email:</strong> yourname@email.com</li>
-                <li><strong>Facebook:</strong> Your Facebook Name</li>
-                <li><strong>Instagram:</strong> @yourinstagram</li>
-                <li><strong>GitHub:</strong> github.com/yourusername</li>
-            </ul>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>© 2026 Portfolio By ม.6 Student. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
